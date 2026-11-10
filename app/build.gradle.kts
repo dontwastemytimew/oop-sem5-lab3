@@ -40,4 +40,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
+    implementation("org.slf4j:slf4j-api:2.0.16")
+    implementation("com.github.tony19:logback-android:3.0.0")
 }
