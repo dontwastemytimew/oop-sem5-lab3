@@ -1,1 +1,6 @@
 /build
+.idea/
+google-services.json
+keystore.properties
+*.jks
+*.keystore
