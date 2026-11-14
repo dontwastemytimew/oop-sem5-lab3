@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">oop-sem5-lab3</string>
+    <string name="app_name">Notes</string>
+    <string name="add_note">Add note</string>
+    <string name="action_sync">Sync</string>
+    <string name="empty_notes">No notes yet. Tap + to add one.</string>
+    <string name="untitled_note">Untitled</string>
+
+    <string name="note_title_hint">Title</string>
+    <string name="note_content_hint">Text</string>
+    <string name="new_note_dialog_title">New note</string>
+    <string name="edit_note_dialog_title">Edit note</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="delete_note_confirmation">Delete this note?</string>
+
+    <string name="sync_in_progress">Synchronizing…</string>
+    <string name="sync_success">Notes are synchronized</string>
+    <string name="sync_failed">Synchronization failed. Check your internet connection.</string>
 </resources>
