@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.lab.notes.data.repository.NoteRepository;
 
-import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executor;
 
 /**
  * Creates {@link NotesViewModel} together with the dependencies it needs.
@@ -14,10 +14,10 @@ import java.util.concurrent.ExecutorService;
 public class NotesViewModelFactory implements ViewModelProvider.Factory {
 
     private final NoteRepository noteRepository;
-    private final ExecutorService backgroundExecutor;
+    private final Executor backgroundExecutor;
 
     public NotesViewModelFactory(NoteRepository noteRepository,
-                                 ExecutorService backgroundExecutor) {
+                                 Executor backgroundExecutor) {
         this.noteRepository = noteRepository;
         this.backgroundExecutor = backgroundExecutor;
     }

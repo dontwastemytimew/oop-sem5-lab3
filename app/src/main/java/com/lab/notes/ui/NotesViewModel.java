@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executor;
 
 /**
  * Prepares notes for the screen and runs all storage work on a background thread.
@@ -24,13 +24,13 @@ public class NotesViewModel extends ViewModel {
     private static final Logger LOGGER = LoggerFactory.getLogger(NotesViewModel.class);
 
     private final NoteRepository noteRepository;
-    private final ExecutorService backgroundExecutor;
+    private final Executor backgroundExecutor;
     private final MutableLiveData<List<Note>> notes =
             new MutableLiveData<>(Collections.emptyList());
     private final MutableLiveData<SyncState> syncState =
             new MutableLiveData<>(SyncState.IDLE);
 
-    public NotesViewModel(NoteRepository noteRepository, ExecutorService backgroundExecutor) {
+    public NotesViewModel(NoteRepository noteRepository, Executor backgroundExecutor) {
         this.noteRepository = noteRepository;
         this.backgroundExecutor = backgroundExecutor;
     }

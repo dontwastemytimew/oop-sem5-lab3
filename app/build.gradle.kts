@@ -54,4 +54,5 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     testImplementation("org.mockito:mockito-core:5.14.2")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
 }

@@ -9,8 +9,8 @@ import com.lab.notes.data.repository.NoteRepository;
 import com.lab.notes.data.repository.NoteRepositoryImpl;
 import com.lab.notes.data.sync.LastWriteWinsResolver;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Executor;
 
 /**
  * Application entry point that creates and shares the objects used across the app.
@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
 public class NotesApplication extends Application {
 
     private NoteRepository noteRepository;
-    private ExecutorService backgroundExecutor;
+    private Executor backgroundExecutor;
 
     @Override
     public void onCreate() {
@@ -35,7 +35,7 @@ public class NotesApplication extends Application {
         return noteRepository;
     }
 
-    public ExecutorService getBackgroundExecutor() {
+    public Executor getBackgroundExecutor() {
         return backgroundExecutor;
     }
 }
