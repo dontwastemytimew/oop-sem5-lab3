@@ -17,6 +17,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.lab.notes.NotesApplication;
 import com.lab.notes.R;
 import com.lab.notes.model.Note;
+import com.lab.notes.i18n.AppLanguage;
+import com.lab.notes.i18n.LanguageManager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,6 +65,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_sync) {
             viewModel.synchronize();
+            return true;
+        }
+        if (item.getItemId() == R.id.action_language) {
+            showLanguageDialog();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -141,6 +147,25 @@ public class MainActivity extends AppCompatActivity
                         isNewNote ? null : note.getId(),
                         titleInput.getText().toString().trim(),
                         contentInput.getText().toString().trim()))
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
+    private void showLanguageDialog() {
+        AppLanguage[] languages = AppLanguage.values();
+        String[] languageNames = new String[languages.length];
+        for (int i = 0; i < languages.length; i++) {
+            languageNames[i] = languages[i].getDisplayName();
+        }
+
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.language_dialog_title)
+                .setSingleChoiceItems(languageNames, LanguageManager.getCurrent().ordinal(),
+                        (dialog, which) -> {
+                            LOGGER.info("Language changed to {}", languages[which].getLanguageTag());
+                            LanguageManager.apply(languages[which]);
+                            dialog.dismiss();
+                        })
                 .setNegativeButton(R.string.cancel, null)
                 .show();
     }

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Нотатки</string>
+    <string name="add_note">Додати нотатку</string>
+    <string name="action_sync">Синхронізувати</string>
+    <string name="action_language">Мова</string>
+    <string name="empty_notes">Нотаток ще немає. Натисніть +, щоб додати.</string>
+    <string name="untitled_note">Без назви</string>
+
+    <string name="note_title_hint">Заголовок</string>
+    <string name="note_content_hint">Текст</string>
+    <string name="new_note_dialog_title">Нова нотатка</string>
+    <string name="edit_note_dialog_title">Редагування нотатки</string>
+    <string name="save">Зберегти</string>
+    <string name="cancel">Скасувати</string>
+    <string name="delete">Видалити</string>
+    <string name="delete_note_confirmation">Видалити цю нотатку?</string>
+    <string name="language_dialog_title">Оберіть мову</string>
+
+    <string name="sync_in_progress">Синхронізація…</string>
+    <string name="sync_success">Нотатки синхронізовано</string>
+    <string name="sync_failed">Не вдалося синхронізувати. Перевірте підключення до інтернету.</string>
+</resources>

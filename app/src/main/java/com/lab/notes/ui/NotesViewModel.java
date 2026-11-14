@@ -66,6 +66,10 @@ public class NotesViewModel extends ViewModel {
     }
 
     public void synchronize() {
+        if (syncState.getValue() == SyncState.IN_PROGRESS) {
+            LOGGER.debug("Synchronization is already running");
+            return;
+        }
         syncState.setValue(SyncState.IN_PROGRESS);
         backgroundExecutor.execute(() -> {
             try {

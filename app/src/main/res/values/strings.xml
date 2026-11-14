@@ -17,4 +17,6 @@
     <string name="sync_in_progress">Synchronizing…</string>
     <string name="sync_success">Notes are synchronized</string>
     <string name="sync_failed">Synchronization failed. Check your internet connection.</string>
+    <string name="action_language">Language</string>
+    <string name="language_dialog_title">Choose language</string>
 </resources>
