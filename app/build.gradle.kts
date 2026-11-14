@@ -47,4 +47,7 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.6.1")
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-firestore")
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }
